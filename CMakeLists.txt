@@ -22,6 +22,7 @@ include_directories(
     "/home/dev/Projects/AOSP/system/logging/liblog/include"
     "/home/dev/Projects/AOSP/external/selinux/libselinux/include"
     "/home/dev/Projects/AOSP/system/core/libcutils/include_outside_system"
+    "/home/dev/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include"
 )
 
 add_executable(main main.cpp)
@@ -29,4 +30,5 @@ target_link_libraries(main
     "${CMAKE_CURRENT_SOURCE_DIR}/lib64/libbinder.so"
     "${CMAKE_CURRENT_SOURCE_DIR}/lib64/libutils.so"
     "${CMAKE_CURRENT_SOURCE_DIR}/lib64/libselinux.so"
+    "${CMAKE_CURRENT_SOURCE_DIR}/lib64/liblog.so"
 )
